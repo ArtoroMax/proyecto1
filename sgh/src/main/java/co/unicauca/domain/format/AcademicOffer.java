@@ -1,9 +1,10 @@
-package co.unicauca.domain.model;
+package co.unicauca.domain.format;
 
 public class AcademicOffer {
 
 	private String codFaculty;
 	private String codProgram;
+	private String period;
 	private String semester;
 	private String codCourse;
 	private String nameCourse;
@@ -13,20 +14,22 @@ public class AcademicOffer {
 	private String journy;
 	private String ambientType;
 	private String resource;
-	private String professor;
-	
+	private String nameProfessor;
+	private String codProfessor;
+	private String codDepartament;
 	
 	
 	public AcademicOffer() {
 
 	}
 
-	public AcademicOffer(String codFaculty, String codProgram, String semester, String codCourse, String nameCourse,
+	public AcademicOffer(String codFaculty, String codProgram, String period, String semester, String codCourse, String nameCourse,
 			int vacanciesCourse, String group, String hourlyIntensity, String journy, String ambientType,
-			String resource, String professor) {
+			String resource, String nameProfessor, String codProfessor, String codDepartament) {
 	
 		this.codFaculty = codFaculty;
 		this.codProgram = codProgram;
+		this.period = period;
 		this.semester = semester;
 		this.codCourse = codCourse;
 		this.nameCourse = nameCourse;
@@ -36,7 +39,9 @@ public class AcademicOffer {
 		this.journy = journy;
 		this.ambientType = ambientType;
 		this.resource = resource;
-		this.professor = professor;
+		this.nameProfessor = nameProfessor;
+		this.codProfessor= codProfessor;
+		this.codDepartament= codDepartament;
 	}
 
 	public String getCodFaculty() {
@@ -127,21 +132,51 @@ public class AcademicOffer {
 		this.resource = resource;
 	}
 
-	public String getProfessor() {
-		return professor;
+	public String getNameProfessor() {
+		return nameProfessor;
 	}
 
-	public void setProfessor(String professor) {
-		this.professor = professor;
+	public void setNameProfessor(String nameProfessor) {
+		this.nameProfessor = nameProfessor;
+	}
+
+	public String getCodProfessor() {
+		return codProfessor;
+	}
+
+	public void setCodProfessor(String codProfessor) {
+		this.codProfessor = codProfessor;
+	}
+
+	public String getCodDepartament() {
+		return codDepartament;
+	}
+
+	public void setCodDepartament(String codDepartament) {
+		this.codDepartament = codDepartament;
+	}
+	
+
+	public String getPeriod() {
+		return period;
+	}
+
+	public void setPeriod(String period) {
+		this.period = period;
 	}
 
 	@Override
 	public String toString() {
-		return "AcademicOffer [codFaculty=" + codFaculty + ", codProgram=" + codProgram + ", semester=" + semester
-				+ ", codCourse=" + codCourse + ", nameCourse=" + nameCourse + ", vacanciesCourse=" + vacanciesCourse
-				+ ", group=" + group + ", hourlyIntensity=" + hourlyIntensity + ", journy=" + journy + ", ambientType="
-				+ ambientType + ", resource=" + resource + ", professor=" + professor + "]";
+		return "AcademicOffer [codFaculty=" + codFaculty + ", codProgram=" + codProgram + ", period=" + period
+				+ ", semester=" + semester + ", codCourse=" + codCourse + ", nameCourse=" + nameCourse
+				+ ", vacanciesCourse=" + vacanciesCourse + ", group=" + group + ", hourlyIntensity=" + hourlyIntensity
+				+ ", journy=" + journy + ", ambientType=" + ambientType + ", resource=" + resource + ", nameProfessor="
+				+ nameProfessor + ", codProfessor=" + codProfessor + ", codDepartament=" + codDepartament + "]";
 	}
+
+
+
+	
 	
 	
 	
