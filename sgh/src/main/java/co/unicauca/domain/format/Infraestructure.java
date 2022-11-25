@@ -1,5 +1,7 @@
 package co.unicauca.domain.format;
 
+import java.util.ArrayList;
+
 public class Infraestructure {
 
 	private String codFaculty;
@@ -7,14 +9,14 @@ public class Infraestructure {
 	private String ubication;
 	private int maxCapacity;
 	private String type;
-	private String nameResource;
-	private String serial;
+	private ArrayList<String> nameResource;
+	private ArrayList<String> serial;
 	private String description;
-	
-	public Infraestructure(String codFaculty, String number, String ubication, int maxCapacity, String type, String nameResource,
-			String serial, String description) {
+
+	public Infraestructure(String codFaculty, String number, String ubication, int maxCapacity, String type,
+			ArrayList<String> nameResource, ArrayList<String> serial, String description) {
 		super();
-		this.codFaculty= codFaculty;
+		this.codFaculty = codFaculty;
 		this.number = number;
 		this.ubication = ubication;
 		this.maxCapacity = maxCapacity;
@@ -24,7 +26,6 @@ public class Infraestructure {
 		this.description = description;
 	}
 
-	
 	public String getCodFaculty() {
 		return codFaculty;
 	}
@@ -32,8 +33,6 @@ public class Infraestructure {
 	public void setCodFaculty(String codFaculty) {
 		this.codFaculty = codFaculty;
 	}
-
-
 
 	public String getNumber() {
 		return number;
@@ -67,19 +66,19 @@ public class Infraestructure {
 		this.type = type;
 	}
 
-	public String getNameResource() {
+	public ArrayList<String> getNameResource() {
 		return nameResource;
 	}
 
-	public void setNameResource(String nameResource) {
+	public void setNameResource(ArrayList<String> nameResource) {
 		this.nameResource = nameResource;
 	}
 
-	public String getSerial() {
+	public ArrayList<String> getSerial() {
 		return serial;
 	}
 
-	public void setSerial(String serial) {
+	public void setSerial(ArrayList<String> serial) {
 		this.serial = serial;
 	}
 
@@ -90,8 +89,5 @@ public class Infraestructure {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
-	
-	
+
 }
